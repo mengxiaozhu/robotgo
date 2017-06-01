@@ -803,3 +803,7 @@ func GetPID() int {
 	pid := C.aGetPID()
 	return int(pid)
 }
+// free bit map
+func FreeBitMap(ref C.MMBitmapRef) {
+	C.destroyMMBitmap(ref)
+}
